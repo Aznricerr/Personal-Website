@@ -47,49 +47,44 @@
   </head>
   <body>
 
-<!--<div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto"> -->
+
 
 <main role="main">
 
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
-      <div class="col-lg-7 col-md-8 mx-auto">
-        <h1 class="fw-light">Victor Le</h1>
-        <p class="lead text-muted">Hello, I'm Victor Le, currently a Senior in Computer Engineering at Purdue University. Professionally, I'm interested in a wide range of career paths covering subjects such as Computer Architecture, Embedded Systems, and Software Engineering</p>
+      <div class="col-lg-8 col-md-8 mx-auto">
+        <h1 class="fw-light">Internships at Intel </h1>
+        <p class="lead text-muted"> This is currently my third internship with Intel. Throughout my time at intel, I've worked with a Pre-Si Verification Team on different projects and different aspects of verification.</p>
+        <img src="{{ job.image.url }}" height =300></img>
         <p>
-          <a href="mailto:victor.nt.le@gmail.com" class="btn btn-primary my-2">Email Me</a>
-          <a href="https://github.com/Aznricerr?tab=overview&from=2021-05-01&to=2021-05-28" class="btn btn-secondary my-2">Github</a>
-          <a href="https://www.linkedin.com/in/victor-l-8b8478126/" class="btn btn-primary my-2">Linkedin</a>
+          <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
         </p>
-        <img src="{% static 'pImg.jpg' %}" height =300></img>
       </div>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for job in jobs.all %}
-
-        <div class="col">
-          <a href="{% url 'detail' job.id %}">
-            <div class="card shadow-sm">
-              <img class="card-img-top" src="{{  job.image.url }} ">
-              <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-              <div class="card-body">
-                <p class="card-text">{{ job.summary }}</p>
-                <div class="d-flex justify-content-between align-items-center">
-              </div>
-            </div>
-          </div>
-          </a>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-10 col-md-12 mx-auto">
+          <h1 class="fw-light">Work/Projects </h1>
+        <dl>
+            <dt>2021 Summer (current)</dt>
+            <li>Working on functional coverage for RAS features at SoC Level. More to come soon!</li>
+          <dt>2020 Summer</dt>
+            <li>Developed post processing python script to detect errors regarding Interrupt-Based messages</li>
+            <li>Collaborated with Verification team on Interrupt Implementation on base station SoC product</li>
+            <li>Compiled data sheets regarding sequences, blocks, and other IPs.</li>
+          <dt>2019 Summer</dt>
+          <li> Engaged with Validation team of a large Data Center SoC product with multiple clusters and complex interconnects.</li>
+            <li>  Developed Perl Scripts to gather regression data, automate analysis and evaluate health of regression models.</li>
+            <li> Utilized Excel for Data Modelling and Display Graphs.</li>
+        </dl>
       </div>
-        {% endfor %}
     </div>
-  </div>
+  </section>
 
-</main>
+
 
 
 

@@ -8,4 +8,15 @@ def home(request):
 
 def detail(request, job_id):
     job_detail = get_object_or_404(Job, pk=job_id)
-    return render(request, 'jobs/detail.html',{'job':job_detail})
+    jobs = Job.objects
+    #return render(request, 'jobs/detail.html',{'job':job_detail})
+    if job_id == 1:
+        return render(request, 'jobs/project1.html', {'job': job_detail})
+    elif job_id == 2:
+        return render(request, 'jobs/intel.html', {'job': job_detail})
+    elif job_id == 3:
+        return render(request, 'jobs/project2.html', {'job': job_detail})
+    else:
+        return render(request, 'jobs/home.html', {'jobs': jobs})
+
+
